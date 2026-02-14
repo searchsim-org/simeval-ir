@@ -1,0 +1,42 @@
+{
+  "experiment": "B2",
+  "timestamp": "2026-02-06T14:05:02.624391",
+  "trusted_tester": "qrels",
+  "n_systems": 6,
+  "testers": {
+    "heuristic": {
+      "kendall_tau": 0.8666666666666666,
+      "tau_p_value": 0.016666666666666666,
+      "spearman_rho": 0.942857142857143,
+      "rho_p_value": 0.004804664723032055,
+      "pearson_r": 0.9869713944810963,
+      "pearson_p_value": 0.00025351107518369075
+    },
+    "noisy": {
+      "kendall_tau": 0.8666666666666666,
+      "tau_p_value": 0.016666666666666666,
+      "spearman_rho": 0.942857142857143,
+      "rho_p_value": 0.004804664723032055,
+      "pearson_r": 0.9823168126379738,
+      "pearson_p_value": 0.0004662779497654384
+    },
+    "realistic": {
+      "kendall_tau": 0.9999999999999999,
+      "tau_p_value": 0.002777777777777778,
+      "spearman_rho": 1.0,
+      "rho_p_value": 0.0,
+      "pearson_r": 0.9987610320746007,
+      "pearson_p_value": 2.301611346648312e-06
+    }
+  },
+  "rate": {
+    "reliabilities": {
+      "qrels": 0.9999649522325321,
+      "heuristic": 0.9999587966833735,
+      "noisy": 0.9976846770846522,
+      "realistic": 1.002391573999442
+    },
+    "converged": true,
+    "iterations": 3
+  }
+}

@@ -1,0 +1,32 @@
+# B1: Behavioral Realism Experiment with Synthetic Data
+# ======================================================
+# This configuration runs B1 using synthetic data for quick testing
+# without requiring external datasets.
+
+name: "B1-Synthetic-Test"
+description: "Quick test of B1 benchmark using synthetic sessions"
+
+protocol: "realism-benchmark-v1"
+
+# Use synthetic adapter for real data (generates on-the-fly)
+real_data:
+  name: "synthetic-real"
+  path: "./data/placeholder"  # Ignored for synthetic adapter
+  adapter: "synthetic"
+  split: "search"
+  max_sessions: 100
+
+# Simulated sessions
+simulators:
+  - name: "heuristic"
+    path: "./data/simulated/heuristic.jsonl"
+
+  - name: "realistic"
+    path: "./data/simulated/realistic.jsonl"
+
+  - name: "noisy"
+    path: "./data/simulated/noisy.jsonl"
+
+n_folds: 3
+seed: 42
+output_dir: "./results/b1-synthetic"

@@ -1,0 +1,46 @@
+# B1: Behavioral Realism Experiment on TripClick
+# ================================================
+# This configuration runs the B1 behavioral realism benchmark
+# comparing simulated sessions against real TripClick sessions.
+#
+# Aligned with paper Table 2: SimIIR-PBM, SimIIR-DBN, Heuristic, LLM-sim
+
+name: "B1-TripClick-v1"
+description: "Behavioral realism benchmark on TripClick health search dataset"
+
+# Protocol to run
+protocol: "realism-benchmark-v1"
+
+# Real session data configuration
+real_data:
+  name: "tripclick-test"
+  path: "./data/tripclick/"
+  adapter: "tripclick"
+  split: "test"
+  max_sessions: null  # Use all sessions
+
+# Simulators to evaluate (aligned with paper's 4 families)
+simulators:
+  - name: "simiir-pbm"
+    path: "./data/simulated/simiir-pbm.jsonl"
+    description: "SimIIR with Position-Based Model"
+
+  - name: "simiir-dbn"
+    path: "./data/simulated/simiir-dbn.jsonl"
+    description: "SimIIR with Dynamic Bayesian Network"
+
+  - name: "heuristic"
+    path: "./data/simulated/heuristic.jsonl"
+    description: "Simple heuristic baseline"
+
+  - name: "llm-sim"
+    path: "./data/simulated/llm-sim.jsonl"
+    description: "LLM-based simulator (GPT-4o style)"
+
+# Experiment settings
+n_folds: 5
+seed: 42
+bootstrap_samples: 1000
+
+# Output directory
+output_dir: "./results/b1-tripclick"

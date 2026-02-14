@@ -1,0 +1,86 @@
+{
+  "experiment": "B3",
+  "timestamp": "2026-02-06T14:05:09.374527",
+  "simulators_analyzed": [
+    "noisy",
+    "realistic",
+    "heuristic"
+  ],
+  "n_simulators": 3,
+  "correlations": {
+    "jsd_action_types": {
+      "pearson_r": 0.5483069745949576,
+      "pearson_p": 0.6305450921111574,
+      "spearman_rho": 0.8660254037844387,
+      "spearman_p": 0.33333333333333326,
+      "n_points": 3
+    },
+    "session_fd": {
+      "pearson_r": -0.6386443378200384,
+      "pearson_p": 0.5589910521657255,
+      "spearman_rho": -0.8660254037844387,
+      "spearman_p": 0.33333333333333326,
+      "n_points": 3
+    },
+    "wasserstein_session_length": {
+      "pearson_r": -0.5713463656531935,
+      "pearson_p": 0.6128426068302668,
+      "spearman_rho": -0.8660254037844387,
+      "spearman_p": 0.33333333333333326,
+      "n_points": 3
+    },
+    "mmd": {
+      "pearson_r": -0.6666518136090551,
+      "pearson_p": 0.5354536317094811,
+      "spearman_rho": -0.8660254037844387,
+      "spearman_p": 0.33333333333333326,
+      "n_points": 3
+    },
+    "realism_classifier": {
+      "pearson_r": 0.4546166452703321,
+      "pearson_p": 0.6995525419422597,
+      "spearman_rho": 0.0,
+      "spearman_p": 1.0,
+      "n_points": 3
+    }
+  },
+  "raw_data": {
+    "simulators": [
+      "noisy",
+      "realistic",
+      "heuristic"
+    ],
+    "reliability_tau": [
+      0.8666666666666666,
+      0.9999999999999999,
+      0.8666666666666666
+    ],
+    "realism_metrics": {
+      "jsd_action_types": [
+        0.03275946427474836,
+        0.033288327710516895,
+        0.024960440014841868
+      ],
+      "session_fd": [
+        0.9929580595891513,
+        0.757327805356842,
+        0.799620955181884
+      ],
+      "wasserstein_session_length": [
+        9.719999999999999,
+        2.8600000000000003,
+        3.5
+      ],
+      "mmd": [
+        0.797866811460305,
+        0.6251064163482278,
+        0.6623222821959994
+      ],
+      "realism_classifier": [
+        0.09499999999999997,
+        0.1339999999999999,
+        0.13640000000000008
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+# B3: Realism-Reliability Analysis
+# =================================
+# This configuration analyzes correlation between B1 realism metrics
+# and B2 tester reliability across simulators.
+#
+# Expected correlations based on published research:
+# - Fréchet distance: r ~ 0.43 (moderate-strong)
+# - MMD: r ~ 0.37 (moderate)
+# - JSD/marginal metrics: r ~ 0.09-0.21 (weak)
+# - Classifier AUC: r ~ -0.18 (weak negative)
+#
+# References:
+# - Fréchet Distance for IR (Kusa et al., ECIR 2024): τ = -0.788 to -0.867
+# - RATE framework (Labhishetty & Zhai, ECIR 2022)
+# - SimIIR 2.0 evaluation (Zerhoudi et al., CIKM 2022)
+
+name: "B3-Realism-Reliability-Analysis"
+description: "Correlation analysis between behavioral realism and tester reliability"
+
+# Paths to B1 and B2 results
+b1_results: "./results/b1-tripclick/"
+b2_results: "./results/b2/b2_results.json"
+
+# Output directory
+output_dir: "./results/b3"
+
+# Analysis settings
+min_simulators: 3  # Minimum simulators needed for correlation
+
+# Metrics to analyze (aligned with paper Table 4)
+metrics_to_analyze:
+  # Marginal distribution metrics (weak predictors)
+  - "jsd_click_depth"           # Expected r: 0.14
+  - "wasserstein_session_length" # Expected r: 0.21
+  - "timing_distribution"        # Expected r: 0.09 (KS dwell time)
+
+  # Classifier-based (weak negative predictor)
+  - "realism_classifier"         # Expected r: -0.18
+
+  # Representation-level metrics (moderate-strong predictors)
+  - "session_fd"                 # Expected r: 0.43 (Fréchet)
+  - "mmd"                        # Expected r: 0.37
+
+  # Additional metrics
+  - "jsd_action_types"
+  - "reformulation_similarity"
+
+# Expected correlation thresholds
+# Based on statistical conventions and IR evaluation literature
+strong_predictor_threshold: 0.30  # |r| >= 0.30 considered strong

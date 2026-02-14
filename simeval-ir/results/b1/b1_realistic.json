@@ -1,0 +1,107 @@
+{
+  "experiment": "B1",
+  "timestamp": "2026-02-06T14:04:40.777198",
+  "config": {
+    "real_path": "data/tripclick",
+    "sim_path": "data/simulated/realistic.jsonl",
+    "real_adapter": "tripclick",
+    "sim_adapter": null,
+    "n_folds": 5
+  },
+  "data": {
+    "real_sessions": 50,
+    "sim_sessions": 50
+  },
+  "simulator": "realistic",
+  "b1_metrics": {
+    "jsd_action_types": {
+      "value": 0.033288327710516895,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "action_types": [
+          "click",
+          "query_issued",
+          "serp_view"
+        ],
+        "real_distribution": {
+          "click": 33,
+          "query_issued": 50,
+          "serp_view": 50
+        },
+        "sim_distribution": {
+          "click": 80,
+          "query_issued": 98,
+          "serp_view": 98
+        }
+      }
+    },
+    "session_fd": {
+      "value": 0.757327805356842,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "embedding_dim": 156,
+        "n_real": 50,
+        "n_sim": 50
+      }
+    },
+    "realism_classifier": {
+      "value": 0.1339999999999999,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "auc": 0.8660000000000001,
+        "accuracy": 0.81,
+        "n_real": 50,
+        "n_sim": 50,
+        "n_folds": 5
+      }
+    },
+    "session_length_distribution": {
+      "value": 0.74,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "p_value": 1.409544601041165e-13,
+        "mean_real": 2.66,
+        "mean_sim": 5.52,
+        "std_real": 0.4737087712930805,
+        "std_sim": 2.146997904051143
+      }
+    },
+    "wasserstein_session_length": {
+      "value": 2.8600000000000003,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "mean_real": 2.66,
+        "mean_sim": 5.52,
+        "std_real": 0.4737087712930805,
+        "std_sim": 2.146997904051143,
+        "n_real": 50,
+        "n_sim": 50
+      }
+    },
+    "mmd": {
+      "value": 0.6251064163482278,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "mmd_squared": 0.3907580317597239,
+        "n_real": 50,
+        "n_sim": 50,
+        "embedding_dim": 156,
+        "gamma": null
+      }
+    }
+  },
+  "leakage_audit": {
+    "main_auc": 0.8660000000000001,
+    "metadata_only_auc": 1.0,
+    "structural_only_auc": 0.8660000000000001,
+    "permutation_auc": 0.3984,
+    "leakage_detected": true,
+    "realism_score": null
+  }
+}

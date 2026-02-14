@@ -1,0 +1,87 @@
+[tool.poetry]
+name = "simeval-ir"
+version = "0.1.0"
+description = "A unified framework for evaluating simulated search and conversational sessions"
+authors = ["SearchSim Team"]
+readme = "README.md"
+license = "MIT"
+keywords = ["information-retrieval", "evaluation", "user-simulation", "conversational-search", "session-evaluation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+packages = [{include = "simeval_ir", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+pydantic = "^2.0"
+numpy = "^1.24"
+scipy = "^1.10"
+scikit-learn = "^1.3"
+click = "^8.1"
+rich = "^13.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4"
+pytest-cov = "^4.1"
+black = "^23.0"
+ruff = "^0.1"
+mypy = "^1.5"
+
+[tool.poetry.group.ml]
+optional = true
+
+[tool.poetry.group.ml.dependencies]
+torch = ">=2.0"
+transformers = "^4.30"
+sentence-transformers = "^2.2"
+
+[tool.poetry.group.nlp]
+optional = true
+
+[tool.poetry.group.nlp.dependencies]
+sacrebleu = "^2.3"
+rouge-score = "^0.1"
+evaluate = "^0.4"
+
+[tool.poetry.group.simiir]
+optional = true
+
+[tool.poetry.group.simiir.dependencies]
+# SimIIR integration - users install simiir separately
+
+[tool.poetry.group.pyterrier]
+optional = true
+
+[tool.poetry.group.pyterrier.dependencies]
+python-terrier = ">=0.10"
+pandas = "^2.0"
+
+[tool.poetry.scripts]
+simeval = "simeval_ir.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use SimEval-IR in your research, please cite our paper."
+title: "SimEval-IR: A Unified Toolkit and Benchmark Suite for Evaluating User Simulators and Search Sessions"
+authors:
+  - family-names: Zerhoudi
+    given-names: Saber
+    affiliation: "University of Passau"
+    email: szerhoudi@acm.org
+preferred-citation:
+  type: conference-paper
+  title: "SimEval-IR: A Unified Toolkit and Benchmark Suite for Evaluating User Simulators and Search Sessions"
+  authors:
+    - family-names: Zerhoudi
+      given-names: Saber
+      affiliation: "University of Passau"
+  collection-title: "Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '26)"
+  conference:
+    name: "The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval"
+    location: "Melbourne, VIC, Australia"
+  year: 2026
+  start: 3537
+  end: 3543
+  publisher:
+    name: "ACM"
+  doi: 10.1145/3805712.3808635
+  url: "https://doi.org/10.1145/3805712.3808635"

@@ -1,0 +1,154 @@
+{
+  "experiment": "B1",
+  "timestamp": "2026-04-30T00:06:59.502156",
+  "provenance": {
+    "schema_version": "v1",
+    "config_hash": "5f2e13c52da19cf8",
+    "random_seed": 42
+  },
+  "config": {
+    "real_path": "data/sim4ia_bench/sessions.jsonl",
+    "sim_path": "data/sim4ia_bench/sims/simiir-pbm.jsonl",
+    "real_adapter": null,
+    "sim_adapter": null,
+    "n_folds": 5,
+    "seed": 42
+  },
+  "data": {
+    "real_sessions": 45,
+    "sim_sessions": 45
+  },
+  "simulator": "simiir-pbm",
+  "b1_metrics": {
+    "jsd_action_types": {
+      "value": 0.18541443062693558,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "action_types": [
+          "click",
+          "query_issued",
+          "serp_view"
+        ],
+        "real_distribution": {
+          "click": 0,
+          "query_issued": 222,
+          "serp_view": 222
+        },
+        "sim_distribution": {
+          "click": 47,
+          "query_issued": 222,
+          "serp_view": 222
+        }
+      }
+    },
+    "jsd_click_depth": {
+      "value": 0.0,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "warning": "No clicks found",
+        "n_real_clicks": 0,
+        "n_sim_clicks": 50
+      }
+    },
+    "session_fd": {
+      "value": 0.8951832281532692,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "embedding_dim": 156,
+        "n_real": 45,
+        "n_sim": 45
+      }
+    },
+    "realism_classifier": {
+      "value": 0.1777777777777778,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "auc": 0.8222222222222222,
+        "accuracy": 0.8111111111111111,
+        "n_real": 45,
+        "n_sim": 45,
+        "n_folds": 5
+      }
+    },
+    "reformulation_similarity": {
+      "value": 0.0,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "reformulation_types": [
+          "generalization",
+          "new",
+          "repetition",
+          "replacement",
+          "specialization"
+        ],
+        "real_distribution": {
+          "specialization": 0.192090395480226,
+          "repetition": 0.1694915254237288,
+          "generalization": 0.12429378531073447,
+          "replacement": 0.5028248587570622,
+          "new": 0.011299435028248588
+        },
+        "sim_distribution": {
+          "specialization": 0.192090395480226,
+          "repetition": 0.1694915254237288,
+          "generalization": 0.12429378531073447,
+          "replacement": 0.5028248587570622,
+          "new": 0.011299435028248588
+        },
+        "n_real_pairs": 177,
+        "n_sim_pairs": 177
+      }
+    },
+    "session_length_distribution": {
+      "value": 0.37777777777777777,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "p_value": 0.0029827477142674273,
+        "mean_real": 9.866666666666667,
+        "mean_sim": 10.911111111111111,
+        "std_real": 2.840970100355002,
+        "std_sim": 3.068276550061015
+      }
+    },
+    "wasserstein_session_length": {
+      "value": 1.0444444444444443,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "mean_real": 9.866666666666667,
+        "mean_sim": 10.911111111111111,
+        "std_real": 2.840970100355002,
+        "std_sim": 3.068276550061015,
+        "n_real": 45,
+        "n_sim": 45
+      }
+    },
+    "mmd": {
+      "value": 0.6961025161224556,
+      "ci_lower": null,
+      "ci_upper": null,
+      "meta": {
+        "mmd_squared": 0.48455871295201347,
+        "n_real": 45,
+        "n_sim": 45,
+        "embedding_dim": 156,
+        "gamma": null
+      }
+    }
+  },
+  "leakage_audit": {
+    "main_auc": 0.8222222222222222,
+    "metadata_only_auc": 0.5,
+    "masked_feature_auc": 0.8222222222222222,
+    "structural_only_auc": 0.8209876543209876,
+    "permutation_auc": 0.42592592592592593,
+    "leakage_detected": false,
+    "realism_score": 0.1777777777777778
+  }
+}

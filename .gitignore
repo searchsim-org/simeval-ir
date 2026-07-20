@@ -6,6 +6,7 @@ __pycache__/
 .Python
 .claude
 build/
+paper/
 develop-eggs/
 dist/
 downloads/
@@ -23,6 +24,7 @@ wheels/
 
 # Virtual environments
 .env
+Sim4IA-Bench/
 .venv
 env/
 venv/
@@ -50,6 +52,9 @@ htmlcov/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Website (excluded from repo)
+website/
 
 # Node.js / Next.js
 node_modules/

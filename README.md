@@ -11,7 +11,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-3776ab?style=flat-square)](https://www.python.org/downloads/)
 
-![SimEval-IR web explorer landing page, showing the behavioral realism, system effectiveness, and tester reliability metric groups](assets/website-home.png)
+![SimEval-IR landing page: a search session shown event by event beside its realism and reliability metric readout](assets/website-home.png)
 
 **[Saber Zerhoudi](mailto:szerhoudi@acm.org)** · University of Passau
 Published at the **49th International ACM SIGIR Conference (SIGIR '26), Melbourne, Australia** &nbsp;·&nbsp; pp. 3537–3543 &nbsp;·&nbsp; [Read the paper](https://doi.org/10.1145/3805712.3808635)
